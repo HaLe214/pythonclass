@@ -27,10 +27,6 @@ def max_int(a, b, c):
     result = max(a, b, c)
     print(result)
 
-def count_number_inlist(inputlist):
-    dict = Counter(inputlist)
-    return dict
-
 
 def reverse_string(inputstring: str):
     return ''.join(reversed(inputstring))
@@ -42,4 +38,5 @@ def countdown_xmas(year):
 ##
 if __name__ == "__main__":
     #inputstring = input("Please input the string to reverse:")
-    print(countdown_xmas(2021))
+    list = [10, 21, 21, 40, 40, 52, 52, 1, 1, 2, 2, 2, 2, 11, 11, 11, 11, 25, 24, 24, 60, 40]
+    print(count_number_inlist(list))
