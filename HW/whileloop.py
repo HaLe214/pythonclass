@@ -2,6 +2,7 @@ import string
 from collections import Counter
 import datetime
 
+# For/While loop và Dictionary/Tuple/Set - Print Star
 def printstar(n):
     star = "*"
     space = " "
@@ -48,11 +49,12 @@ def printstar(n):
             star_text = star +  space * (starnum - 2) + star
         print(spacenum * space + star_text)
 
-
+# For/While loop và Dictionary/Tuple/Set - Đếm số
 def count_number_inlist(inputlist):
     dict = Counter(inputlist)
     return dict
 
+# For/While loop và Dictionary/Tuple/Set - Unique value Dictionary
 def unique_value_dict(list_dict):
     for dict in list_dict:
         listvalue = list(dict.values())
@@ -62,6 +64,7 @@ def unique_value_dict(list_dict):
                 output.append(x)
         print(output)
 
+# For/While loop và Dictionary/Tuple/Set - Find Pair
 def find_pair(list, sum):
     result = []
     for f in list:
@@ -69,10 +72,18 @@ def find_pair(list, sum):
             if f + s == sum and f < s:
                 result.append((f, s))
     print(result)
+
+# Sorting - Sắp xếp điểm thi
+def sort_tup(sl):
+  result_list = sorted(sl, key=lambda tup:tup[2])
+  return result_list
+
+
 if __name__ == "__main__":
     list1 = [10, 21, 21, 40, 40, 52, 52, 1, 1, 2, 2, 2, 2, 11, 11, 11, 11, 25, 24, 24, 60, 40]
     list_dict1 = [dict(Trang=38, Thu=38, Ngoc=27, Thanh=26, Yen=25, Hang=22, Thuy=22)]
     list_dict2 = [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"},{"VIII":"S007"}]
+    C = [(1, 2, 5), (9, 1, 2), (6, 4, 4), (3, 2, 3), (10, 2, 1)]
     A = [3, 6, 7, 9, 11, 12] 
     B = 15
-    print(find_pair(A, B))
+    print(sort_tup(C))
